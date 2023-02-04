@@ -11,6 +11,8 @@
 		8229132C298D9502008FBC53 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8229132A298D9502008FBC53 /* MainViewController.xib */; };
 		8229132F298D9AC1008FBC53 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229132D298D9AC1008FBC53 /* TableViewCell.swift */; };
 		82291330298D9AC1008FBC53 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8229132E298D9AC1008FBC53 /* TableViewCell.xib */; };
+		82291334298E4EAB008FBC53 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82291333298E4EAB008FBC53 /* NetworkManager.swift */; };
+		82291337298E4FF0008FBC53 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82291336298E4FF0008FBC53 /* News.swift */; };
 		82CA5165298D6A2B000F13BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA5164298D6A2B000F13BD /* AppDelegate.swift */; };
 		82CA5169298D6A2B000F13BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA5168298D6A2B000F13BD /* ViewController.swift */; };
 		82CA516C298D6A2B000F13BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CA516A298D6A2B000F13BD /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		8229132A298D9502008FBC53 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8229132D298D9AC1008FBC53 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8229132E298D9AC1008FBC53 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		82291333298E4EAB008FBC53 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		82291336298E4FF0008FBC53 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		82CA5161298D6A2B000F13BD /* yaprincevLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yaprincevLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CA5164298D6A2B000F13BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CA5168298D6A2B000F13BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82291331298E4E67008FBC53 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82291335298E4F04008FBC53 /* Models */,
+				82291332298E4E8B008FBC53 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82291332298E4E8B008FBC53 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				82291333298E4EAB008FBC53 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		82291335298E4F04008FBC53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82291336298E4FF0008FBC53 /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		82CA5158298D6A2B000F13BD = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +91,7 @@
 		82CA5163298D6A2B000F13BD /* yaprincevLab */ = {
 			isa = PBXGroup;
 			children = (
+				82291331298E4E67008FBC53 /* Services */,
 				82CA5164298D6A2B000F13BD /* AppDelegate.swift */,
 				82CA5168298D6A2B000F13BD /* ViewController.swift */,
 				82CA516A298D6A2B000F13BD /* Main.storyboard */,
@@ -149,8 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82291337298E4FF0008FBC53 /* News.swift in Sources */,
 				8229132B298D9502008FBC53 /* MainViewController.swift in Sources */,
 				8229132F298D9AC1008FBC53 /* TableViewCell.swift in Sources */,
+				82291334298E4EAB008FBC53 /* NetworkManager.swift in Sources */,
 				82CA5169298D6A2B000F13BD /* ViewController.swift in Sources */,
 				82CA5165298D6A2B000F13BD /* AppDelegate.swift in Sources */,
 			);

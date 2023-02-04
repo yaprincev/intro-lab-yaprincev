@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     let numberOfNews = 20
+    let network = NetrworkManager()
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +19,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configureApperance()
         
+        network.getNews { news in
+            print(news.articles.count)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        
+        }
     }
 
 }
@@ -40,6 +48,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath)
+        
         return cell
     }
 }
