@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821B9EC0298EF9760060AA50 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B9EBF298EF9760060AA50 /* ImageLoader.swift */; };
+		821B9EC2298EFA1E0060AA50 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B9EC1298EFA1E0060AA50 /* UIImageView+ImageLoader.swift */; };
+		821B9EC5298F0D220060AA50 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B9EC3298F0D220060AA50 /* WebViewController.swift */; };
+		821B9EC6298F0D220060AA50 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821B9EC4298F0D220060AA50 /* WebViewController.xib */; };
 		8229132B298D9502008FBC53 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82291329298D9502008FBC53 /* MainViewController.swift */; };
 		8229132C298D9502008FBC53 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8229132A298D9502008FBC53 /* MainViewController.xib */; };
 		8229132F298D9AC1008FBC53 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229132D298D9AC1008FBC53 /* TableViewCell.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		821B9EBF298EF9760060AA50 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		821B9EC1298EFA1E0060AA50 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
+		821B9EC3298F0D220060AA50 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		821B9EC4298F0D220060AA50 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		82291329298D9502008FBC53 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8229132A298D9502008FBC53 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8229132D298D9AC1008FBC53 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 		82291331298E4E67008FBC53 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82291338298EF89C008FBC53 /* ImageLoader */,
 				82291335298E4F04008FBC53 /* Models */,
 				82291332298E4E8B008FBC53 /* Networking */,
 			);
@@ -70,6 +79,15 @@
 				82291336298E4FF0008FBC53 /* News.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		82291338298EF89C008FBC53 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				821B9EBF298EF9760060AA50 /* ImageLoader.swift */,
+				821B9EC1298EFA1E0060AA50 /* UIImageView+ImageLoader.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 		82CA5158298D6A2B000F13BD = {
@@ -102,6 +120,8 @@
 				8229132A298D9502008FBC53 /* MainViewController.xib */,
 				8229132D298D9AC1008FBC53 /* TableViewCell.swift */,
 				8229132E298D9AC1008FBC53 /* TableViewCell.xib */,
+				821B9EC3298F0D220060AA50 /* WebViewController.swift */,
+				821B9EC4298F0D220060AA50 /* WebViewController.xib */,
 			);
 			path = yaprincevLab;
 			sourceTree = "<group>";
@@ -167,6 +187,7 @@
 				82CA5171298D6A2F000F13BD /* LaunchScreen.storyboard in Resources */,
 				82291330298D9AC1008FBC53 /* TableViewCell.xib in Resources */,
 				82CA516E298D6A2F000F13BD /* Assets.xcassets in Resources */,
+				821B9EC6298F0D220060AA50 /* WebViewController.xib in Resources */,
 				82CA516C298D6A2B000F13BD /* Main.storyboard in Resources */,
 				8229132C298D9502008FBC53 /* MainViewController.xib in Resources */,
 			);
@@ -179,6 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821B9EC0298EF9760060AA50 /* ImageLoader.swift in Sources */,
+				821B9EC5298F0D220060AA50 /* WebViewController.swift in Sources */,
+				821B9EC2298EFA1E0060AA50 /* UIImageView+ImageLoader.swift in Sources */,
 				82291337298E4FF0008FBC53 /* News.swift in Sources */,
 				8229132B298D9502008FBC53 /* MainViewController.swift in Sources */,
 				8229132F298D9AC1008FBC53 /* TableViewCell.swift in Sources */,

@@ -57,15 +57,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = dataSource.articles[indexPath.row]
-        performSegue(withIdentifier: segueId, sender: article)
+        let deVC = WebViewController()
+        deVC.article = article
+        show(deVC, sender: article)
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueId, let article = sender as? Article {
-            let destinationController = segue.destination as! WebViewController
-            destinationController.urlToPage = article
-        }
-    }
 }
 
