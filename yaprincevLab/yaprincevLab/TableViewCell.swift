@@ -22,7 +22,7 @@ class TableViewCell: UITableViewCell {
             guard let url = URL(string: imageUrl) else {
                 return
             }
-                // willadd
+            imageLabel.loadImage(from: url)
         }
     }
     

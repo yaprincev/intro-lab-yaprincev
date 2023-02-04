@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     let numberOfNews = 20
     let network = NetrworkManager()
-    
+    var dataSource = News(articles: [])
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,8 @@ class MainViewController: UIViewController {
         configureApperance()
         
         network.getNews { news in
-            print(news.articles.count)
+            self.dataSource = news
+            print(news.articles[1])
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -43,12 +44,13 @@ private extension MainViewController {
 extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfNews
+        return dataSource.articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as! TableViewCell
+        cell.title = dataSource.articles[indexPath.row].title
+        cell.imageUrl = dataSource.articles[indexPath.row].urlToImage
         return cell
     }
 }

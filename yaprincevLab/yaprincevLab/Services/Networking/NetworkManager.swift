@@ -12,6 +12,7 @@ class NetrworkManager {
     let sessionConfiguration = URLSessionConfiguration.default
     let decoder = JSONDecoder()
     let session = URLSession.shared
+    
 
     func getNews(complition: @escaping(News) -> Void) {
        guard let url = URL(string: "https://newsapi.org/v2/everything?q=bitcoin&apiKey=991f987ca0904ab1bb3fd42bb5106383") else { return }
