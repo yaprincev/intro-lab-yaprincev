@@ -9,26 +9,38 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let idCell = "CellID"
-
+    let numberOfNews = 20
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        configureApperance()
         
     }
 
 }
 
+private extension MainViewController {
+    func configureApperance() {
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "\(TableViewCell.self)")
+    }
+}
+
+
+
+
 extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return numberOfNews
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath)
         return cell
     }
 }
+
