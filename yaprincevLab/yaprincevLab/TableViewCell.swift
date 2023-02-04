@@ -32,9 +32,9 @@ class TableViewCell: UITableViewCell {
         }
     }
     
-    var counter: String = "" {
+    var counter: Int = 0 {
         didSet {
-            visitorsCount.text = counter
+            visitorsCount.text = String(counter)
         }
     }
     

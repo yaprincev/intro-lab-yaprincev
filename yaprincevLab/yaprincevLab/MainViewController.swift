@@ -8,10 +8,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    let segueId = "Segue"
+    
+    
     let numberOfNews = 20
     let network = NetrworkManager()
+    
+    
     var dataSource = News(articles: [])
+    var counterOfViews = [Int](repeating: 0, count: 100)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,11 +25,10 @@ class MainViewController: UIViewController {
         
         network.getNews { news in
             self.dataSource = news
-            print(news.articles[1])
+            print(self.dataSource.articles.count)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        
         }
     }
 
@@ -52,10 +55,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as! TableViewCell
         cell.title = dataSource.articles[indexPath.row].title
         cell.imageUrl = dataSource.articles[indexPath.row].urlToImage
+        cell.counter = counterOfViews[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        counterOfViews[indexPath.row] += 1
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         let article = dataSource.articles[indexPath.row]
         let deVC = WebViewController()
         deVC.article = article
