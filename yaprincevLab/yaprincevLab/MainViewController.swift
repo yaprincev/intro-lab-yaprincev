@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+    let segueId = "Segue"
     let numberOfNews = 20
     let network = NetrworkManager()
     var dataSource = News(articles: [])
@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
 private extension MainViewController {
     func configureApperance() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "\(TableViewCell.self)")
     }
 }
@@ -41,7 +42,7 @@ private extension MainViewController {
 
 
 
-extension MainViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.articles.count
@@ -52,6 +53,19 @@ extension MainViewController: UITableViewDataSource {
         cell.title = dataSource.articles[indexPath.row].title
         cell.imageUrl = dataSource.articles[indexPath.row].urlToImage
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = dataSource.articles[indexPath.row]
+        performSegue(withIdentifier: segueId, sender: article)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueId, let article = sender as? Article {
+            let destinationController = segue.destination as! WebViewController
+            destinationController.urlToPage = article
+        }
     }
 }
 
