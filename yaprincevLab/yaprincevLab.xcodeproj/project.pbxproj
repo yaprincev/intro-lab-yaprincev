@@ -109,21 +109,69 @@
 		82CA5163298D6A2B000F13BD /* yaprincevLab */ = {
 			isa = PBXGroup;
 			children = (
+				82CA5172298D6A2F000F13BD /* Info.plist */,
+				82CB852B298FFD1C00586F17 /* MainFlow */,
+				82CB852A298FFCF100586F17 /* Application */,
 				82291331298E4E67008FBC53 /* Services */,
-				82CA5164298D6A2B000F13BD /* AppDelegate.swift */,
+			);
+			path = yaprincevLab;
+			sourceTree = "<group>";
+		};
+		82CB852A298FFCF100586F17 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				82CA516D298D6A2F000F13BD /* Assets.xcassets */,
 				82CA516F298D6A2F000F13BD /* LaunchScreen.storyboard */,
-				82CA5172298D6A2F000F13BD /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		82CB852B298FFD1C00586F17 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				82CA5164298D6A2B000F13BD /* AppDelegate.swift */,
+				82CB852C298FFD2A00586F17 /* MainModule */,
+				82CB852D298FFD3C00586F17 /* DetailModule */,
+				82CB852F298FFD6600586F17 /* WebModule */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		82CB852C298FFD2A00586F17 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				82CB852E298FFD4900586F17 /* Cells */,
 				82291329298D9502008FBC53 /* MainViewController.swift */,
 				8229132A298D9502008FBC53 /* MainViewController.xib */,
-				8229132D298D9AC1008FBC53 /* TableViewCell.swift */,
-				8229132E298D9AC1008FBC53 /* TableViewCell.xib */,
-				821B9EC3298F0D220060AA50 /* WebViewController.swift */,
-				821B9EC4298F0D220060AA50 /* WebViewController.xib */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		82CB852D298FFD3C00586F17 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
 				821B9EC7298F965A0060AA50 /* DetailViewController.swift */,
 				821B9EC8298F965A0060AA50 /* DetailViewController.xib */,
 			);
-			path = yaprincevLab;
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		82CB852E298FFD4900586F17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8229132D298D9AC1008FBC53 /* TableViewCell.swift */,
+				8229132E298D9AC1008FBC53 /* TableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		82CB852F298FFD6600586F17 /* WebModule */ = {
+			isa = PBXGroup;
+			children = (
+				821B9EC3298F0D220060AA50 /* WebViewController.swift */,
+				821B9EC4298F0D220060AA50 /* WebViewController.xib */,
+			);
+			path = WebModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
