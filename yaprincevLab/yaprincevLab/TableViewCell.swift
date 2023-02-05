@@ -20,6 +20,7 @@ class TableViewCell: UITableViewCell {
     var imageUrl: String = "" {
         didSet {
             guard let url = URL(string: imageUrl) else {
+                imageLabel.image = UIImage(named: "Black")
                 return
             }
             imageLabel.loadImage(from: url)

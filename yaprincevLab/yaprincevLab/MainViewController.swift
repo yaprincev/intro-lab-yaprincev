@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     
     var dataSource = News(articles: [])
-    var counterOfViews = [Int](repeating: 0, count: 100)
+    var counterOfViews = [Int](repeating: 0, count: 20)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,9 +26,12 @@ class MainViewController: UIViewController {
         network.getNews { news in
             self.dataSource = news
             print(self.dataSource.articles.count)
+            self.dataSource.articles.removeSubrange(self.numberOfNews...)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            
+            
         }
     }
 
@@ -40,6 +43,9 @@ private extension MainViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "\(TableViewCell.self)")
     }
+    
+
+    
 }
 
 
@@ -54,7 +60,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as! TableViewCell
         cell.title = dataSource.articles[indexPath.row].title
-        cell.imageUrl = dataSource.articles[indexPath.row].urlToImage
+        if dataSource.articles[indexPath.row].urlToImage != nil {
+            cell.imageUrl = dataSource.articles[indexPath.row].urlToImage!
+        } else {
+             cell.imageUrl = "nil"
+        }
         cell.counter = counterOfViews[indexPath.row]
         return cell
     }

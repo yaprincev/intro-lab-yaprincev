@@ -8,14 +8,14 @@
 import Foundation
 
 struct News: Codable {
-    let articles: [Article]
+    var articles: [Article]
 }
 
 // MARK: - Article
 struct Article: Codable {
     let title: String
     let url: String
-    let urlToImage: String
+    let urlToImage: String?
 }
 
 
