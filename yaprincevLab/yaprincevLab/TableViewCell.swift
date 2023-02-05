@@ -9,6 +9,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    // MARK: - Views
+    
     @IBOutlet private weak var imageLabel: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var eyeImage: UIImageView!
@@ -43,6 +45,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         eyeImage.image = UIImage(named: "Eye")
+        titleLabel.numberOfLines = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

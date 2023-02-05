@@ -8,13 +8,18 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var describtionLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var sourceLabel: UIButton!
+    
+    // MARK: - Views
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var describtionLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var sourceLabel: UIButton!
     
     var article: Article?
+    
+    // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +45,15 @@ class DetailViewController: UIViewController {
     }
     
 }
+
+// MARK: - Private Methods
+
 private extension DetailViewController {
     func configureApperance() {
         sourceLabel.titleLabel?.text = "Source"
-        titleLabel.font = UIFont(name:"System Bold" , size: 20)
+        titleLabel.font = UIFont(name:"HelveticaNeue-Bold" , size: 20)
         describtionLabel.font = UIFont(name:"System" , size: 15)
+        titleLabel.numberOfLines = 0
     }
     func dateFormatter(date: String?) -> String{
         if date == nil {
@@ -59,6 +68,4 @@ private extension DetailViewController {
         }
         return newDateString
     }
-
-
 }

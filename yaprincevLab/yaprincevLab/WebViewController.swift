@@ -13,6 +13,8 @@ class WebViewController: UIViewController {
     
     var article: Article?
     
+    // MARK: - Views
+    
     @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +22,5 @@ class WebViewController: UIViewController {
         let request = URLRequest(url: url)
         webView.load(request)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -16,7 +16,11 @@ class MainViewController: UIViewController {
     private var dataSource = News(articles: [])
     private var counterOfViews = [Int](repeating: 0, count: 20)
     
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: - Views
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +33,12 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
-            
         }
     }
 
 }
+
+// MARK: - Private Methods
 
 private extension MainViewController {
     func configureApperance() {
@@ -48,7 +52,7 @@ private extension MainViewController {
 }
 
 
-
+// MARK: - TableView
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
