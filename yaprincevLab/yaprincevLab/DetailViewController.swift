@@ -19,13 +19,17 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = article?.title
+        
         if article?.urlToImage != nil {
             let url = URL(string: article?.urlToImage! ?? " ")
             newsImage.loadImage(from: url!)
         } else {
             newsImage.image = UIImage(named: "Black")
         }
+        
         describtionLabel.text = article?.description
+        
+        dateLabel.text = dateFormatter(date: article?.publishedAt)
         configureApperance()
     }
     
@@ -42,7 +46,19 @@ private extension DetailViewController {
         titleLabel.font = UIFont(name:"System Bold" , size: 20)
         describtionLabel.font = UIFont(name:"System" , size: 15)
     }
-   
+    func dateFormatter(date: String?) -> String{
+        if date == nil {
+            return ""
+        }
+        var newDateString = ""
+        for i in date! {
+            if i == "T" {
+                break
+            }
+            newDateString.append(i)
+        }
+        return newDateString
+    }
 
 
 }

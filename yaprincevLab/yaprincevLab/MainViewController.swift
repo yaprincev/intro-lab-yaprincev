@@ -9,13 +9,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - Private properties
     
-    let numberOfNews = 20
-    let network = NetrworkManager()
-    
-    
-    var dataSource = News(articles: [])
-    var counterOfViews = [Int](repeating: 0, count: 20)
+    private let numberOfNews = 20
+    private let network = NetrworkManager()
+    private var dataSource = News(articles: [])
+    private var counterOfViews = [Int](repeating: 0, count: 20)
     
     @IBOutlet weak var tableView: UITableView!
     

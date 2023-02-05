@@ -36,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEG-qS-sHg">
-                    <rect key="frame" x="15" y="285" width="384" height="84"/>
+                    <rect key="frame" x="15" y="290" width="384" height="84"/>
                     <string key="text">As an investment banker, Barry Silbert worked on some of the highest-profile corporate failures. Now, as founder of venture capital firm Digital Currency Group, parent of troubled crypto firm Genesis, he is grappling with problems closer to home.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
@@ -60,7 +60,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JEG-qS-sHg" firstAttribute="top" secondItem="rq5-NI-2iY" secondAttribute="bottom" constant="30" id="6gL-FY-qqg"/>
+                <constraint firstItem="JEG-qS-sHg" firstAttribute="top" secondItem="rq5-NI-2iY" secondAttribute="bottom" constant="35" id="6gL-FY-qqg"/>
                 <constraint firstItem="g7i-k8-NdZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Ch1-MU-sCm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rq5-NI-2iY" secondAttribute="trailing" constant="15" id="DWy-c1-ciB"/>
                 <constraint firstItem="rq5-NI-2iY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="EZ4-Zm-2UW"/>

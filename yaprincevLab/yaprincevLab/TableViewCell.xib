@@ -35,8 +35,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54G-WW-Dah">
-                        <rect key="frame" x="95" y="36.5" width="425" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54G-WW-Dah">
+                        <rect key="frame" x="95" y="0.0" width="425" height="91"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,12 +53,12 @@
                     <constraint firstItem="DYp-aQ-JX2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="e0P-oI-dmD"/>
                     <constraint firstAttribute="trailing" secondItem="DYp-aQ-JX2" secondAttribute="trailing" constant="23" id="eHj-Hz-cSe"/>
                     <constraint firstAttribute="bottom" secondItem="DYp-aQ-JX2" secondAttribute="bottom" constant="38" id="exH-Vm-U2L"/>
-                    <constraint firstItem="54G-WW-Dah" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36.5" id="i4t-Q4-nxP"/>
+                    <constraint firstItem="54G-WW-Dah" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i4t-Q4-nxP"/>
                     <constraint firstItem="DYp-aQ-JX2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="j6I-I1-h8Y"/>
                     <constraint firstAttribute="trailing" secondItem="54G-WW-Dah" secondAttribute="trailing" constant="45" id="lu2-dS-2fV"/>
                     <constraint firstAttribute="bottom" secondItem="LYe-KK-afQ" secondAttribute="bottom" constant="36.5" id="q5y-vR-nUe"/>
                     <constraint firstAttribute="trailing" secondItem="LYe-KK-afQ" secondAttribute="trailing" constant="3" id="tHr-ZR-Wzk"/>
-                    <constraint firstAttribute="bottom" secondItem="54G-WW-Dah" secondAttribute="bottom" constant="36.5" id="vaq-V5-wLr"/>
+                    <constraint firstAttribute="bottom" secondItem="54G-WW-Dah" secondAttribute="bottom" id="vaq-V5-wLr"/>
                     <constraint firstItem="LYe-KK-afQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xzs-78-Tht"/>
                 </constraints>
             </tableViewCellContentView>
