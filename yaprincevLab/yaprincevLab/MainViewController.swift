@@ -75,7 +75,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             self.tableView.reloadData()
         }
         let article = dataSource.articles[indexPath.row]
-        let deVC = WebViewController()
+        let deVC = DetailViewController()
         deVC.article = article
         show(deVC, sender: article)
     }
